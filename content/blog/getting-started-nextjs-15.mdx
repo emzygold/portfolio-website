@@ -1,0 +1,77 @@
+---
+title: "Getting Started with Next.js 15"
+description: "A beginner-friendly guide to building modern web applications with Next.js 15 and the App Router."
+date: "2026-06-01"
+tags: ["Next.js", "React", "Web Development", "Tutorial"]
+readingTime: "6 min"
+featured: false
+---
+
+## Why Next.js?
+
+Next.js has become the go-to framework for building React applications. With version 15 and the App Router, it offers an incredible developer experience with built-in features that would take weeks to set up manually:
+
+- **Server Components** — better performance, smaller bundles
+- **File-based routing** — create a page by adding a file
+- **API routes** — build your backend alongside your frontend
+- **Automatic optimization** — images, fonts, and scripts optimized out of the box
+
+## Setting Up Your First Project
+
+Getting started is as simple as running one command:
+
+```bash
+npx create-next-app@latest my-app
+```
+
+This gives you a fully configured project with TypeScript, ESLint, and all the essentials.
+
+## Understanding the App Router
+
+The App Router uses a folder-based routing system:
+
+```
+app/
+├── page.tsx          → /
+├── about/
+│   └── page.tsx      → /about
+├── blog/
+│   ├── page.tsx      → /blog
+│   └── [slug]/
+│       └── page.tsx  → /blog/my-post
+└── layout.tsx        → Shared layout
+```
+
+Every `page.tsx` file becomes a route. Folders create URL segments. It's intuitive and powerful.
+
+## Server vs Client Components
+
+By default, components in the App Router are **Server Components**. They run on the server and send HTML to the browser. This means:
+
+- Smaller JavaScript bundles
+- Better SEO (content is pre-rendered)
+- Direct database access (no API layer needed)
+
+When you need interactivity (state, effects, event handlers), add `'use client'` at the top of the file:
+
+```tsx
+'use client';
+
+import { useState } from 'react';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+}
+```
+
+## What's Next
+
+Next.js 15 is a fantastic foundation for any web project. In future posts, I'll cover:
+- Adding MDX for blog content
+- Implementing animations with Framer Motion
+- Deploying to Vercel
+
+---
+
+*Building a web project? [Check out my services](/services) or [get in touch](/contact).*
