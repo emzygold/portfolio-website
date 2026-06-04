@@ -25,9 +25,12 @@ export default function ContactPage() {
 
     try {
       // Replace with your Formspree or Web3Forms endpoint
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/xbdervaj', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
 
