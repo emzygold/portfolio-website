@@ -18,7 +18,7 @@ export const navLinks = [
 
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/emzygold", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/emmanuel-Adegbayi", icon: "linkedin" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/emmanueladegbayi", icon: "linkedin" },
   { label: "Twitter", href: "https://twitter.com/Adememman1", icon: "twitter" },
   { label: "Upwork", href: "https://www.upwork.com/freelancers/~01cc574be9d83b8e17", icon: "upwork" },
 ];
