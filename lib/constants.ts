@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Emmanuel Adegbayi — AI Developer & Automation Expert",
   description:
     "AI Developer specializing in website design, automation, and workflow optimization. Building intelligent solutions that save time and solve real problems.",
-  url: "https://emmanueladegbayi.vercel.app",
+  url: "https://techvisage.vercel.app",
   ogImage: "/images/og-image.png",
 };
 
@@ -17,11 +17,10 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com/emmanueladegbayi", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/emmanueladegbayi", icon: "linkedin" },
-  { label: "Twitter", href: "https://twitter.com/emmanueladegbayi", icon: "twitter" },
-  { label: "Upwork", href: "https://upwork.com/freelancers/emmanueladegbayi", icon: "upwork" },
-  { label: "Fiverr", href: "https://fiverr.com/emmanueladegbayi", icon: "fiverr" },
+  { label: "GitHub", href: "https://github.com/emzygold", icon: "github" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/emmanuel-Adegbayi", icon: "linkedin" },
+  { label: "Twitter", href: "https://twitter.com/Adememman1", icon: "twitter" },
+  { label: "Upwork", href: "https://www.upwork.com/freelancers/~01cc574be9d83b8e17", icon: "upwork" },
 ];
 
 export const services = [
@@ -84,21 +83,9 @@ export const stats = [
 export const testimonials = [
   {
     quote:
-      "Emmanuel delivered exactly what I needed — a clean, functional application that exceeded my expectations. His attention to detail and communication throughout the project was outstanding.",
-    name: "Alex Johnson",
-    role: "Startup Founder",
-  },
-  {
-    quote:
-      "Working with Emmanuel was a great experience. He understood my requirements quickly and delivered a polished product on time. Would definitely hire again.",
-    name: "Sarah Chen",
-    role: "Business Owner",
-  },
-  {
-    quote:
-      "Emmanuel's automation solution saved our team hours of manual work every week. He's knowledgeable, responsive, and truly cares about delivering quality work.",
-    name: "Michael Roberts",
-    role: "Operations Manager",
+      "Nice working with Emmanuel — he's quick and time conscious. I'll really recommend him to anyone.",
+    name: "Sydney Wise",
+    role: "Client — Shopify Quote Calculator",
   },
 ];
 

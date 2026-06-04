@@ -57,6 +57,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable}`}>
       <body>
+        {/* Google Analytics - Replace G-XXXXXXXXXX with your Measurement ID from https://analytics.google.com */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('gtag', 'G-XXXXXXXXXX');
+            `,
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -12,7 +12,7 @@ const experience = [
   {
     date: '2026 — Present',
     title: 'AI Developer & Freelancer',
-    company: 'Self-Employed (Upwork & Fiverr)',
+    company: 'Self-Employed (Upwork)',
     description: 'Building AI-powered tools, automation systems, and web applications for clients worldwide. Specializing in intelligent agents, workflow optimization, and modern web development.',
   },
   {
@@ -58,7 +58,7 @@ export default function ResumePage() {
           <p>Professional experience, skills, and qualifications.</p>
           <div className="accent-line"></div>
           <div style={{ marginTop: 'var(--space-xl)' }}>
-            <Link href="/resume.pdf" className="btn btn-primary" target="_blank">
+            <Link href="/Emmanuel-Adegbayi-Resume.pdf" className="btn btn-primary" target="_blank">
               Download PDF ↓
             </Link>
           </div>
