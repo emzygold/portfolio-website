@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { services, processSteps } from '@/lib/constants';
 
@@ -55,16 +56,18 @@ export default function ServicesPage() {
                 </div>
                 <div style={{
                   order: index % 2 === 0 ? 1 : 0,
-                  background: 'var(--color-bg-card)',
                   borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--color-border)',
+                  overflow: 'hidden',
+                  position: 'relative',
                   aspectRatio: '4/3',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '4rem',
                 }}>
-                  {service.icon}
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </AnimatedSection>

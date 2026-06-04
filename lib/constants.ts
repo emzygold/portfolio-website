@@ -26,6 +26,7 @@ export const socialLinks = [
 export const services = [
   {
     icon: "⚡",
+    image: "/images/services/website-design.png",
     title: "Website Design",
     description:
       "Modern, responsive websites that convert visitors into clients. From landing pages to full web applications, built with the latest technologies.",
@@ -38,6 +39,7 @@ export const services = [
   },
   {
     icon: "🔄",
+    image: "/images/services/automation.png",
     title: "Automation",
     description:
       "Streamline repetitive tasks with intelligent automation systems. Save hours every week by letting machines handle the boring stuff.",
@@ -50,6 +52,7 @@ export const services = [
   },
   {
     icon: "🛠️",
+    image: "/images/services/workflow.png",
     title: "Workflow",
     description:
       "Design and optimize workflows that save time and reduce errors. Build efficient processes that scale with your business.",
@@ -62,6 +65,7 @@ export const services = [
   },
   {
     icon: "📋",
+    image: "/images/services/project-management.png",
     title: "Project Management",
     description:
       "Keep your projects organized and on track with structured planning, task tracking, and team coordination using tools like Trello.",
