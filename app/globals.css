@@ -3,7 +3,7 @@
    Emmanuel Adegbayi | Bold & Vibrant | Amber + Cyan
    ============================================================ */
 
-/* ---- Google Fonts are loaded via next/font in layout.tsx ---- */
+/* ---- Google Fonts loaded via <link> in layout.tsx ---- */
 
 /* ============ CSS CUSTOM PROPERTIES ============ */
 :root {
@@ -58,6 +58,11 @@
   --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
   --shadow-amber-glow: 0 0 20px rgba(245, 158, 11, 0.3);
   --shadow-cyan-glow: 0 0 20px rgba(34, 211, 238, 0.3);
+
+  /* Font Families */
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Playfair Display', Georgia, serif;
 
   /* Max width */
   --max-width: 1280px;
@@ -657,8 +662,18 @@ p {
 /* ============ SERVICES ============ */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-xl);
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-card-wrapper {
+  display: flex;
 }
 
 .service-card {
@@ -670,6 +685,19 @@ p {
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 320px;
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-md);
+}
+
+.service-card p {
+  font-size: 0.9375rem;
+  flex: 1;
 }
 
 .service-card::before {
@@ -697,15 +725,6 @@ p {
 .service-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-lg);
-}
-
-.service-card h3 {
-  margin-bottom: var(--space-md);
-  font-size: 1.25rem;
-}
-
-.service-card p {
-  font-size: 0.9375rem;
 }
 
 /* ============ STATS ============ */
@@ -1390,10 +1409,6 @@ p {
     height: 280px;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1414,6 +1429,10 @@ p {
 @media (max-width: 640px) {
   .section {
     padding: var(--space-3xl) 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
   .stats-bar {
