@@ -3,22 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { navLinks } from '@/lib/constants';
-
-const navVariants = {
-  hidden: { y: -80, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, ease: 'easeOut' as const },
-  },
-};
 
 const linkVariants = {
   hidden: { y: -10, opacity: 0 },
@@ -53,24 +39,13 @@ const mobileLinkVariants = {
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    setScrolled(latest > 50);
-  });
 
   const toggleMobile = () => setMobileOpen((prev) => !prev);
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <motion.nav
-      className={`navbar${scrolled ? ' scrolled' : ''}`}
-      variants={navVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <nav className="navbar">
       <div className="navbar-inner">
         {/* Logo */}
         <Link href="/" className="navbar-logo" onClick={closeMobile}>
@@ -168,6 +143,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
